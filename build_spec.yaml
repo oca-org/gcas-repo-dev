@@ -8,8 +8,7 @@ steps:
     name: "compress the repo"
     command: |
       tar -cvzf repo.tgz ./
-      ls
 outputArtifacts:
-  - name: built-gh-repo
+  - name: artifact
     type: BINARY
-    location: ${OCI_WORKSPACE_DIR}/build/repo.tgz
+    location: ${OCI_PRIMARY_SOURCE_DIR}/repo.tgz
