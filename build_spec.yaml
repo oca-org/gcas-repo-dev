@@ -8,6 +8,12 @@ steps:
     name: "compress the repo"
     command: |
       tar -cvzf repo.tgz ./ >> /dev/null
+      onFailure:
+      - type: Command
+        command: |
+          echo "FAILED to compress the GitHub repo"
+          ls | grep *.tgz
+        timeoutInSeconds: 400
 outputArtifacts:
   - name: artifact
     type: BINARY
