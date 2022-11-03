@@ -8,8 +8,6 @@ steps:
     name: "compress the repo"
     command: |
       tar cvzf ${OCI_WORKSPACE_DIR}/repo.tgz ./
-      echo $0
-      ls ${OCI_WORKSPACE_DIR}
 outputArtifacts:
   - name: artifact
     type: BINARY
