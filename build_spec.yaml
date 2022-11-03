@@ -8,7 +8,7 @@ steps:
     name: "compress the repo"
     command: |
       tar -cvzf repo.tgz ./ >> /dev/null
-      echo *.tgz
+      echo "repo.tgz artifact is created successfully"
 outputArtifacts:
   - name: artifact
     type: BINARY
