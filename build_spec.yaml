@@ -7,10 +7,10 @@ steps:
   - type: Command
     name: "compress the repo"
     command: |
-      tar cvzf /tmp/repo.tgz ./ >> /var/null
+      tar cvzf ${OCI_WORKSPACE_DIR}/repo.tgz ./
       echo $0
-      ls /tmp
+      ls ${OCI_WORKSPACE_DIR}
 outputArtifacts:
   - name: artifact
     type: BINARY
-    location: /tmp/repo.tgz
+    location: ${OCI_WORKSPACE_DIR}/repo.tgz
