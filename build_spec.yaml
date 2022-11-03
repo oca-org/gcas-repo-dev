@@ -7,9 +7,9 @@ steps:
   - type: Command
     name: "compress the repo"
     command: |
-      yum install tar
-      tar cvzf repo.tgz ./
-      echo $?
+      tar cvzf repo.tgz ./ >> /var/null
+      cat /var/log
+      cat /var/null
 outputArtifacts:
   - name: artifact
     type: BINARY
