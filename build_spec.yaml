@@ -8,7 +8,6 @@ steps:
     name: "compress the repo"
     command: |
       tar -cvzf ${OCI_WORKSPACE_DIR}/repo.tgz ./
-      curl -H "Accept: application/vnd.github+json" https://api.github.com/orgs/oracle
 outputArtifacts:
   - name: artifact
     type: BINARY
