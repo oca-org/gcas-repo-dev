@@ -8,10 +8,6 @@ steps:
     name: "compress the repo"
     command: |
       tar -cvzf ${OCI_WORKSPACE_DIR}/repo.tgz ./
-  - type: Command
-    name: "remove an artifact"
-    command: |
-      oci --auth instance_principal artifacts generic artifact delete --artifact-id ocid1.genericartifact.oc1.uk-london-1.0.amaaaaaa3ih3njqanj2yfq6hrapuivb5hcfa63zmqzft7k5eoqrwijz7q2pq  --force
 outputArtifacts:
   - name: artifact
     type: BINARY
