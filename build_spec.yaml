@@ -8,7 +8,7 @@ steps:
     name: "compress the repo"
     command: |
       # tar -cvzf ${OCI_WORKSPACE_DIR}/repo.tgz ./
-      fallocate -l 2G ${OCI_WORKSPACE_DIR}/dummy_file.img
+      fallocate -l 1G ${OCI_WORKSPACE_DIR}/dummy_file.img
       ls -laSh ${OCI_WORKSPACE_DIR}
 outputArtifacts:
   - name: artifact
