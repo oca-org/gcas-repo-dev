@@ -1,14 +1,15 @@
 version: 0.1
 component: build
-timeoutInSeconds: 1000
+timeoutInSeconds: 28000
 shell: bash
 
 steps:
   - type: Command
     name: "compress the repo"
     command: |
-      tar -cvzf ${OCI_WORKSPACE_DIR}/repo.tgz ./
+      # tar -cvzf ${OCI_WORKSPACE_DIR}/repo.tgz ./
+      fallocate -l 10G ${OCI_WORKSPACE_DIR}/dummy_file.img
 outputArtifacts:
   - name: artifact
     type: BINARY
-    location: ${OCI_WORKSPACE_DIR}/repo.tgz
+    location: ${OCI_WORKSPACE_DIR}/dummy_file.img
