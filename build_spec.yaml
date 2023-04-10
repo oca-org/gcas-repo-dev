@@ -3,15 +3,22 @@ component: build
 timeoutInSeconds: 28000
 shell: bash
 
+#steps:
+#  - type: Command
+#    name: "compress the repo"
+#    command: |
+#      # tar -cvzf ${OCI_WORKSPACE_DIR}/repo.tgz ./
+#      fallocate -l 195M ${OCI_WORKSPACE_DIR}/dummy_file.tgz
+#      # tar -cvzf ${OCI_WORKSPACE_DIR}/dummy_file.tgz dummy_file.img
+#      ls -laSh ${OCI_WORKSPACE_DIR}
+
 steps:
   - type: Command
-    name: "compress the repo"
+    name: "show download completed time"
     command: |
-      # tar -cvzf ${OCI_WORKSPACE_DIR}/repo.tgz ./
-      fallocate -l 195M ${OCI_WORKSPACE_DIR}/dummy_file.tgz
-      # tar -cvzf ${OCI_WORKSPACE_DIR}/dummy_file.tgz dummy_file.img
-      ls -laSh ${OCI_WORKSPACE_DIR}
-outputArtifacts:
-  - name: artifact
-    type: BINARY
-    location: ${OCI_WORKSPACE_DIR}/dummy_file.tgz
+      date "+%T"
+    
+#outputArtifacts:
+#  - name: artifact
+#    type: BINARY
+#    location: ${OCI_WORKSPACE_DIR}/dummy_file.tgz
