@@ -1,6 +1,6 @@
 # Reporting security vulnerabilities
 
-Oracle values the independent security research community and believes that
+Oracle values the independent security research community and believes that 
 responsible disclosure of security vulnerabilities helps us ensure the security
 and privacy of all our users.
 
